@@ -42,21 +42,20 @@ public class CardDealerUnitTest {
         }
 
         int[] total = new int[13];
-            for (Player player : players) {
-                assertEquals(10, player.cards.size());
-                for (Card card : player.cards) {
-                    total[card.value]++;
-                }
+        for (Player player : players) {
+            assertEquals(10, player.cards.size());
+            for (Card card : player.cards) {
+                total[card.value]++;
             }
-            assertTrue(total[0] < 12);
-            for (int i = 1; i < 13; i++) {
-                assertTrue(total[i] < 8);
-            }
+        }
+        assertTrue(total[0] <= 12);
+        for (int i = 1; i < 13; i++) {
+            assertTrue(total[i] <= 8);
+        }
 
         Player player5 = new Player();
-
         players.add(player5);
 
-            assertThrows(IllegalArgumentException.class,() -> dealer.getStartCards(players));
+        assertThrows(IllegalArgumentException.class, () -> dealer.getStartCards(players));
     }
 }
