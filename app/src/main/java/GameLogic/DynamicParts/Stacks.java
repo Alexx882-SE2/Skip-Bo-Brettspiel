@@ -4,8 +4,6 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import GameLogic.StaticParts.Card;
-import GameLogic.StaticParts.GameCard;
-import GameLogic.StaticParts.SkipBoCard;
 
 /**
  * The Stacks class represents a stack of cards in the game.
@@ -14,13 +12,13 @@ import GameLogic.StaticParts.SkipBoCard;
 public class Stacks {
 
     /** The list of GameCards in the stack. */
-    private ArrayList<GameCard> playerStack = new ArrayList<>();
+    private ArrayList<Card> playerStack = new ArrayList<>();
 
     /**
      * Returns the list of GameCards in the stack.
      * @return the list of GameCards in the stack.
      */
-    public ArrayList<GameCard> getPlayerStack() {
+    public ArrayList<Card> getPlayerStack() {
         return playerStack;
     }
 
@@ -30,15 +28,11 @@ public class Stacks {
      * If the top card is a Card, it is cast to a Card and returned.
      * @return the top card of the stack.
      */
-    public GameCard getTopCard() {
+    public Card getTopCard() {
         try {
-            GameCard card = playerStack.get(playerStack.size() - 1);
-            if (card instanceof SkipBoCard) {
-                return (SkipBoCard) card;
-            } else {
-                return (Card) card;
-            }
-        } catch (IndexOutOfBoundsException e) {
+            return  playerStack.get(playerStack.size() - 1);
+
+            } catch (IndexOutOfBoundsException e) {
             System.out.println("PlayerStack empty");
             return null; // or some better value
         }

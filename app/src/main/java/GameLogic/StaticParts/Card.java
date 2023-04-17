@@ -1,10 +1,10 @@
 package GameLogic.StaticParts;
 /**
 
- The Card class represents a card with a unique card number. The card number must be an integer between 1 and 12 (inclusive).
+ The Card class represents a card with a unique card number. The card number must be an integer between 0 and 12 (inclusive).
  */
 
-public class Card extends GameCard{
+public class Card {
     /**
 
      The unique card number.
@@ -17,15 +17,15 @@ public class Card extends GameCard{
     /**
 
      Constructs a new Card object with the specified card number.
-     @param cardNumber the card number for this card. Must be an integer between 1 and 12 (inclusive).
-     @throws IllegalArgumentException if the card number is not between 1 and 12 (inclusive).
+     @param cardNumber the card number for this card. Must be an integer between 0 and 12 (inclusive).
+     @throws IllegalArgumentException if the card number is not between 0 and 12 (inclusive).
      */
 
     public Card(int cardNumber){
-        if(cardNumber>=1 && cardNumber <= 12){
+        if(cardNumber>=0 && cardNumber <= 12){
             this.cardNumber = cardNumber;
         } else{
-            throw new IllegalArgumentException("Card numbers should be between 1 and 12");
+            throw new IllegalArgumentException("Card numbers should be between 0 and 12");
         }
     }
 

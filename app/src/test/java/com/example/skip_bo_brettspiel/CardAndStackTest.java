@@ -19,7 +19,7 @@ public class CardAndStackTest {
         }
 
         // Test invalid card numbers
-        assertThrows(IllegalArgumentException.class, () -> new Card(0));
+        assertThrows(IllegalArgumentException.class, () -> new Card(-1));
         assertThrows(IllegalArgumentException.class, () -> new Card(13));
     }
 

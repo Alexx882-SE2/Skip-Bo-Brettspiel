@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 import GameLogic.DynamicParts.Stacks;
 import GameLogic.StaticParts.Card;
-import GameLogic.StaticParts.GameCard;
-import GameLogic.StaticParts.SkipBoCard;
 
 public class StacksTest {
 
@@ -22,7 +20,7 @@ public class StacksTest {
     @BeforeAll
     public static void setup() {
         stacks = new Stacks();
-        stacks.getPlayerStack().add(new SkipBoCard());
+        stacks.getPlayerStack().add(new Card(0));
         stacks.getPlayerStack().add(new Card(1));
         stacks.getPlayerStack().add(new Card(2));
     }
@@ -34,18 +32,16 @@ public class StacksTest {
 
     @Test
     public void testGetPlayerStack() {
-        ArrayList<GameCard> playerStack = stacks.getPlayerStack();
+        ArrayList<Card> playerStack = stacks.getPlayerStack();
         assertNotNull(playerStack);
         assertEquals(3, playerStack.size());
-        assertTrue(playerStack.get(0) instanceof SkipBoCard);
-        assertTrue(playerStack.get(1) instanceof Card);
-        assertTrue(playerStack.get(2) instanceof Card);
+        assertNotNull(playerStack.get(0));
+
     }
 
     @Test
     public void testGetTopCard() {
-        GameCard topCard = stacks.getTopCard();
-        assertTrue(topCard instanceof Card);
+        Card topCard = stacks.getTopCard();
         assertSame(topCard, stacks.getPlayerStack().get(2));
     }
 
