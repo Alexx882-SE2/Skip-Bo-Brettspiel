@@ -38,4 +38,9 @@ public class Card extends GameCard{
     public int getCardNumber() {
         return cardNumber;
     }
+
+    @Override
+    public String toString(){
+        return Integer.toString(cardNumber);
+    }
 }

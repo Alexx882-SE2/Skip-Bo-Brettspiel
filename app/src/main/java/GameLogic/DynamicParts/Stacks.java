@@ -40,8 +40,13 @@ public class Stacks {
     /**
      * Prints the size of the stack and the top card.
      */
-    public void printStack(){
-        System.out.println("Size of stack:" + playerStack.size()+
-                "\t Top card:" + getTopCard());
+    public String getPlayerStackAsString(){
+        return "Size of stack:" + getPlayerStackSize() + "\t Top card:" + getTopCard().toString();
     }
+
+    public int getPlayerStackSize(){
+        return playerStack.size();
+    }
+
+
 }
