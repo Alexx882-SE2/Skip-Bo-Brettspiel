@@ -1,7 +1,6 @@
 package GameLogic.DynamicParts;
 
 import java.util.ArrayList;
-
 import GameLogic.StaticParts.Card;
 import GameLogic.StaticParts.GameCard;
 import GameLogic.StaticParts.SkipBoCard;
