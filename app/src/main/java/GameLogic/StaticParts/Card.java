@@ -4,7 +4,7 @@ package GameLogic.StaticParts;
  The Card class represents a card with a unique card number. The card number must be an integer between 1 and 12 (inclusive).
  */
 
-public class Card {
+public class Card extends GameCard{
     /**
 
      The unique card number.
