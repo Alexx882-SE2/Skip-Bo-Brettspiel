@@ -29,4 +29,11 @@ public class CardAndStackTest {
         assertEquals(5, card.getCardNumber());
     }
 
+    @Test
+    public void testToString() {
+        Card card = new Card(5);
+        assertEquals("5", card.toString());
+    }
+
+
 }
