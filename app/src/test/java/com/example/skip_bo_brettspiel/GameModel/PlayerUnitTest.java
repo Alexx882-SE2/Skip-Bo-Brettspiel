@@ -8,10 +8,14 @@ public class PlayerUnitTest {
 
     @Test
     void test() {
-        Player player = new Player();
+        Player player = new Player("Player");
         player.cards.add(new Card(0));
 
         assertEquals(0, player.cards.get(0).value);
         assertEquals(1, player.cards.size());
+        assertEquals("Player", player.getName());
+
+        player.setName("Player2");
+        assertEquals("Player2", player.getName());
     }
 }
