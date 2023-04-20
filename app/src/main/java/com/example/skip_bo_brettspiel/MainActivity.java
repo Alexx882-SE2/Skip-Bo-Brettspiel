@@ -1,8 +1,6 @@
 package com.example.skip_bo_brettspiel;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,9 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.skip_bo_brettspiel.GameModel.Player;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
