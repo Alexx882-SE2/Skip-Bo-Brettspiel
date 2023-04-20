@@ -3,7 +3,8 @@ package com.example.skip_bo_brettspiel;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,28 +22,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         EditText usernameField = findViewById(R.id.editUsername);
+        Button createGameButton = findViewById(R.id.createButton);
+        Button joinGameButton = findViewById(R.id.joinButton);
         Player currentPlayer = new Player(usernameField.getText().toString());
 
-        // textWatcher is for watching any changes in editText
-        TextWatcher textWatcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // this function is called when text is edited
+        createGameButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 currentPlayer.setName(usernameField.getText().toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
+                //Code to host a game on device.
 
             }
+        });
 
-        };
+        joinGameButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                currentPlayer.setName(usernameField.getText().toString());
+                //Code to join existing game.
 
-        usernameField.addTextChangedListener(textWatcher);
+            }
+        });
+
     }
 }

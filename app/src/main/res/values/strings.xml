@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Skip-Bo-Brettspiel</string>
+    <string name="join_button">JOIN GAME</string>
+    <string name="create_button">CREATE GAME</string>
+    <string name="default_username">Username</string>
+    <string name="logo_description">Logo of Skip-Bo</string>
 </resources>
