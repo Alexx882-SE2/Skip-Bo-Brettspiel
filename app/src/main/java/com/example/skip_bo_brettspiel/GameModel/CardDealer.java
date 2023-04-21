@@ -12,7 +12,7 @@ public class CardDealer {
         Random random = new Random();
         int[] duplicates = new int[13];
         for (Player player : players) {
-            player.cards.clear();
+            player.mainStack.clear();
             for (int i = 0; i < 10; i++) {
                 int value = random.nextInt(13);
                 if (duplicates[value] < 8) {
@@ -24,7 +24,7 @@ public class CardDealer {
                     i--;
                     continue;
                 }
-                player.cards.add(new Card(value)); //1-12 are values, 0 is special card
+                player.mainStack.add(new Card(value)); //1-12 are values, 0 is special card
             }
         }
     }
