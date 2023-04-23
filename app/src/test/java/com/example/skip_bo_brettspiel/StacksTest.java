@@ -1,22 +1,17 @@
 package com.example.skip_bo_brettspiel;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-import GameLogic.DynamicParts.Stacks;
-import GameLogic.StaticParts.Card;
+import com.example.skip_bo_brettspiel.GameModel.Card;
+import com.example.skip_bo_brettspiel.GameModel.Stacks;
 
 
-
-
-
-    public class StacksTest {
+public class StacksTest {
 
         private static Stacks stacks;
 
