@@ -10,7 +10,7 @@ public class CardUnitTest {
     public void testBasic() {
         for (int i = 0; i < 13; i++) {
 
-            assertEquals(i, new Card(i).value);
+            assertEquals(i, new Card(i).cardNumber);
         }
     }
 }

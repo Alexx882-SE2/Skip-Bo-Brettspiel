@@ -13,6 +13,7 @@ public class PlayerUnitTest {
 
         assertEquals(0, player.mainStack.get(0).value);
         assertEquals(1, player.mainStack.size());
+        
         assertEquals("Player", player.getName());
 
         player.setName("Player2");
