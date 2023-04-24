@@ -1,9 +1,5 @@
 package com.example.skip_bo_brettspiel.GameModel;
 
-import android.util.Log;
-
-import java.util.ArrayList;
-
 public class Card {
     public final int cardNumber;
 
@@ -35,21 +31,9 @@ public class Card {
     public String toString() {
         return Integer.toString(cardNumber);
     }
-    
-    public void cheat(ArrayList<Card> stack, Card card) {
-        if (stack == null) { // validate input parameter
-            Log.e("Player", "cannot input null stack");
-            return;
-        }
-
-        try {
-            stack.add(card);
-        } catch (Exception e) {
-            Log.e("Player", "Error adding card to stack", e);
-        }
-
-
-    }
 
 
 }
+
+
+
