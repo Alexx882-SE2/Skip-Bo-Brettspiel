@@ -15,7 +15,7 @@ public class Stacks {
 
     /**
      * Returns the list of GameCards in the stack.
-
+     *
      * @return the list of GameCards in the stack.
      */
     public ArrayList<Card> getPlayerStack() {
@@ -24,7 +24,7 @@ public class Stacks {
 
     /**
      * Returns the top card of the stack.
-
+     *
      * @return the top card of the stack.
      */
     public Card getTopCard() {
@@ -35,9 +35,9 @@ public class Stacks {
             System.out.println("PlayerStack empty");
             return null; // or some better value
         }
+    }
 
-
-    /**
+    /*
      * Prints the size of the stack and the top card.
      */
     public String getPlayerStackAsString() {
@@ -51,10 +51,9 @@ public class Stacks {
         }
         return playerStackString;
     }
-    }
 
 
-
+    public int getPlayerStackSize() {
         return playerStack.size();
     }
 

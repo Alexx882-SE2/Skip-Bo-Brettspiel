@@ -1,5 +1,9 @@
 package com.example.skip_bo_brettspiel.GameModel;
 
+import android.util.Log;
+
+import java.util.ArrayList;
+
 public class Card {
     public final int cardNumber;
 
