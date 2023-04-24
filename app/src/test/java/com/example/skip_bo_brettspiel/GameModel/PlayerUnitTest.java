@@ -11,7 +11,7 @@ public class PlayerUnitTest {
         Player player = new Player("Player");
         player.cards.add(new Card(0));
 
-        assertEquals(0, player.cards.get(0).value);
+        assertEquals(0, player.cards.get(0).cardNumber);
         assertEquals(1, player.cards.size());
         assertEquals("Player", player.getName());
 
