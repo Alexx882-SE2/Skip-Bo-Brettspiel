@@ -10,11 +10,12 @@ import java.util.ArrayList;
  */
 public class Stacks {
 
-    /** The list of GameCards in the stack. */
+
     private ArrayList<Card> playerStack = new ArrayList<>();
 
     /**
      * Returns the list of GameCards in the stack.
+
      * @return the list of GameCards in the stack.
      */
     public ArrayList<Card> getPlayerStack() {
@@ -23,17 +24,17 @@ public class Stacks {
 
     /**
      * Returns the top card of the stack.
+
      * @return the top card of the stack.
      */
     public Card getTopCard() {
         try {
-            return  playerStack.get(playerStack.size() - 1);
+            return playerStack.get(playerStack.size() - 1);
 
-            } catch (IndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("PlayerStack empty");
             return null; // or some better value
         }
-    }
 
 
     /**
@@ -50,9 +51,10 @@ public class Stacks {
         }
         return playerStackString;
     }
+    }
 
 
-    public int getPlayerStackSize(){
+
         return playerStack.size();
     }
 

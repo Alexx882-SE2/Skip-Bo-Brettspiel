@@ -5,7 +5,10 @@ import com.example.skip_bo_brettspiel.GameModel.Card;
 import com.example.skip_bo_brettspiel.GameModel.Player;
 import com.example.skip_bo_brettspiel.GameModel.Stacks;
 
+import com.example.skip_bo_brettspiel.GameModel.Card;
+
 import org.junit.jupiter.api.Test;
+
 
 public class CardAndStackTest {
 
