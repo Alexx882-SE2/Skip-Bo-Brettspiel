@@ -16,10 +16,14 @@ public class CardDeck {
         this.cards = new ArrayList<>();
     }
 
+    public ArrayList<Card> getCards() {
+        return this.cards;
+    }
+
     /**
      * Fills the deck with cards  (12xJoker, 8x each number)
      */
-    private void fillDeck() {
+    public void fillDeck() {
         for (int i = 1; i <= 12; i++) {
             for (int j = 0; j < 8; j++) {
                 Card c = new Card(i);
@@ -35,8 +39,31 @@ public class CardDeck {
      *
      * @return shuffled deck
      */
-    private ArrayList<Card> shuffle() {
-        Collections.shuffle(this.cards);
+    public ArrayList<Card> shuffle() throws Exception {
+        if (this.cards.size() > 0) {
+            Collections.shuffle(this.cards);
+        } else {
+            throw new Exception("Deck is empty");
+        }
         return this.cards;
+    }
+
+    /**
+     * Gets the remaining cards in the deck
+     *
+     * @return number of remaining cards
+     */
+    public int getRemainingCardCount() {
+        return this.cards.size();
+    }
+
+    /**
+     * Gets the remaining cards of a certain value
+     *
+     * @param cardNumber the cardNumber to search for
+     * @return number of cards remaining with the searched cardNumber
+     */
+    public int getRemainingCardCountOfCardNumber(int cardNumber) {
+        return (int) this.cards.stream().filter(c -> c.getCardNumber() == cardNumber).count();
     }
 }
