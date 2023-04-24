@@ -11,8 +11,6 @@ public class Player {
     public ArrayList<Card> cards = new ArrayList<>();
 
 
-    //private static final String TAG = "PlayerCheat";
-
     public Player(String name) {
 
         this.name = name;

@@ -2,6 +2,9 @@ package com.example.skip_bo_brettspiel;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import com.example.skip_bo_brettspiel.GameModel.Card;
+import com.example.skip_bo_brettspiel.GameModel.Player;
+import com.example.skip_bo_brettspiel.GameModel.Stacks;
+
 import org.junit.jupiter.api.Test;
 
 public class CardAndStackTest {
@@ -29,6 +32,14 @@ public class CardAndStackTest {
     public void testToString() {
         Card card = new Card(5);
         assertEquals("5", card.toString());
+    }
+
+    @Test
+    void testGetPlayerStackAsStringIndexOutOfBoundsException() {
+        // create a stacks object with no cards
+        Stacks s = new Stacks();
+        // call the method and check that an exception is thrown
+        assertThrows(RuntimeException.class, s::getPlayerStackAsString);
     }
 
 

@@ -23,8 +23,6 @@ public class Stacks {
 
     /**
      * Returns the top card of the stack.
-     * If the top card is a SkipBoCard, it is cast to a SkipBoCard and returned.
-     * If the top card is a Card, it is cast to a Card and returned.
      * @return the top card of the stack.
      */
     public Card getTopCard() {
