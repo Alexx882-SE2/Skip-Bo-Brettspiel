@@ -1,10 +1,12 @@
-package GameLogic.DynamicParts;
+package com.example.skip_bo_brettspiel.GameModel;
+
+import com.example.skip_bo_brettspiel.GameModel.Card;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 import Exceptions.CardDeckEmptyException;
-import GameLogic.StaticParts.Card;
+
 
 /**
  * This class represents the deck of cards which have not been dealt yet and from which it should be possible to pull new cards as required

@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.example.skip_bo_brettspiel.GameModel.Card;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,8 +13,8 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import Exceptions.CardDeckEmptyException;
-import GameLogic.DynamicParts.CardDeck;
-import GameLogic.StaticParts.Card;
+import com.example.skip_bo_brettspiel.GameModel.CardDeck;
+
 
 public class CardDeckTest {
     private static CardDeck cd;
