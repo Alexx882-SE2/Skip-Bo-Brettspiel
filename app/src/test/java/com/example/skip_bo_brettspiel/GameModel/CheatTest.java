@@ -1,6 +1,5 @@
 package com.example.skip_bo_brettspiel.GameModel;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -37,12 +36,10 @@ public class CheatTest {
 
     @Test
     void testCheat_NullStack() {
-        // Arrange
         ArrayList<Card> stack = null;
         Card card = new Card(1);
         Player player = new Player("g");
 
-        // Act and Assert
         assertThrows(RuntimeException.class, () -> player.cheat(stack, card));
     }
 

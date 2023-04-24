@@ -35,8 +35,7 @@ public class Player {
      */
     public void cheat(ArrayList<Card> stack, Card card) {
         if (stack == null) { // validate input parameter
-            Log.e("Player", "cannot input null stack");
-            return;
+            throw new RuntimeException();
         }
         stack.add(card);
     }
