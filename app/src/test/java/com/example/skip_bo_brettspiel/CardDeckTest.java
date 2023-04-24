@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import Exceptions.CardDeckEmptyException;
 import GameLogic.DynamicParts.CardDeck;
 import GameLogic.StaticParts.Card;
 
@@ -27,7 +28,7 @@ public class CardDeckTest {
     }
 
     @Test
-    public void testFillDeck() {
+    void testFillDeck() {
         assertEquals(0, cd.getCards().size());
         cd.fillDeck();
 
@@ -35,7 +36,7 @@ public class CardDeckTest {
     }
 
     @Test
-    public void testShuffle() throws Exception {
+    void testShuffle() throws CardDeckEmptyException {
         cd.fillDeck();
 
         ArrayList<Card> beforeShuffle = new ArrayList<>(cd.getCards());
@@ -46,18 +47,18 @@ public class CardDeckTest {
     }
 
     @Test
-    public void testShuffleEmptyDeck() {
-        Exception e = assertThrows(Exception.class, () -> cd.shuffle());
+    void testShuffleEmptyDeck() {
+        Exception e = assertThrows(CardDeckEmptyException.class, () -> cd.shuffle());
         assertEquals("Deck is empty", e.getMessage());
     }
 
     @Test
-    public void testGetRemainingCardCountEmptyDeck() {
+    void testGetRemainingCardCountEmptyDeck() {
         assertEquals(0, cd.getRemainingCardCount());
     }
 
     @Test
-    public void testGetRemainingCardCount() {
+    void testGetRemainingCardCount() {
         assertEquals(0, cd.getRemainingCardCount());
         cd.fillDeck();
 
@@ -68,12 +69,12 @@ public class CardDeckTest {
     }
 
     @Test
-    public void testGetRemainingCardCountOfCardNumberEmptyDeck() {
+    void testGetRemainingCardCountOfCardNumberEmptyDeck() {
         assertEquals(0, cd.getRemainingCardCountOfCardNumber(0));
     }
 
     @Test
-    public void testGetRemainingCardCountOfCardNumber() {
+    void testGetRemainingCardCountOfCardNumber() {
         assertEquals(0, cd.getRemainingCardCountOfCardNumber(1));
         cd.fillDeck();
 

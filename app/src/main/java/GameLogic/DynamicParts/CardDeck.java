@@ -3,6 +3,7 @@ package GameLogic.DynamicParts;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import Exceptions.CardDeckEmptyException;
 import GameLogic.StaticParts.Card;
 
 /**
@@ -39,11 +40,11 @@ public class CardDeck {
      *
      * @return shuffled deck
      */
-    public ArrayList<Card> shuffle() throws Exception {
+    public ArrayList<Card> shuffle() throws CardDeckEmptyException {
         if (this.cards.size() > 0) {
             Collections.shuffle(this.cards);
         } else {
-            throw new Exception("Deck is empty");
+            throw new CardDeckEmptyException("Deck is empty");
         }
         return this.cards;
     }
