@@ -38,14 +38,7 @@ public class Player {
             Log.e("Player", "cannot input null stack");
             return;
         }
-
-        try {
-            stack.add(card);
-        } catch (Exception e) {
-            Log.e("Player", "Error adding card to stack", e);
-        }
-
-
+        stack.add(card);
     }
 
 
