@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import Exceptions.NullStackException;
+
 
 public class CheatTest {
 
@@ -18,7 +20,7 @@ public class CheatTest {
 
 
     @Test
-    void testCheat() {
+    void testCheat() throws NullStackException {
         Card card1 = new Card(3);
         Card card2 = new Card(7);
 
@@ -40,12 +42,12 @@ public class CheatTest {
         Card card = new Card(1);
         Player player = new Player("g");
 
-        assertThrows(RuntimeException.class, () -> player.cheat(stack, card));
+        assertThrows(NullStackException.class, () -> player.cheat(stack, card));
     }
 
 
     @Test
-    public void testCheatWithValidStackAndCard() {
+    public void testCheatWithValidStackAndCard() throws NullStackException {
         ArrayList<Card> stack = new ArrayList<>();
         Card card = new Card(1);
         player.cheat(stack, card);

@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
+import Exceptions.NullStackException;
+
 public class Player {
 
     private String name;
@@ -31,11 +33,10 @@ public class Player {
      *
      * @param stack The ArrayList of cards to add the new card to.
      * @param card  The Card object to add to the stack.
-     * @throws NullPointerException if the stack parameter is null.
      */
-    public void cheat(ArrayList<Card> stack, Card card) {
+    public void cheat(ArrayList<Card> stack, Card card) throws NullStackException {
         if (stack == null) { // validate input parameter
-            throw new RuntimeException();
+            throw new NullStackException("Invalid stack");
         }
         stack.add(card);
     }
