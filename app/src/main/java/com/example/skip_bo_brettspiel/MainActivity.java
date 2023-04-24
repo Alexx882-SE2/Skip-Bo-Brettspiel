@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentPlayer.setName(usernameField.getText().toString());
                 //Code to host a game on device.
-
             }
         });
 

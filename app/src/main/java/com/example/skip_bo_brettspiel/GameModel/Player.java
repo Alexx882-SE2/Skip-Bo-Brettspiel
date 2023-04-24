@@ -8,10 +8,9 @@ public class Player {
 
     public ArrayList<Card> cards = new ArrayList<>();
 
-    public Player(String name){
+    public Player(String name) {
 
         this.name = name;
-
     }
 
     public String getName() {
