@@ -30,8 +30,8 @@ public class CardDealerUnitTest {
             int[] total = new int[13];
             dealer.getStartCards(players);
             for (Player player : players) {
-                assertEquals(10, player.cards.size());
-                for (Card card : player.cards) {
+                assertEquals(10, player.mainStack.size());
+                for (Card card : player.mainStack) {
                     total[card.value]++;
                 }
             }
@@ -43,8 +43,8 @@ public class CardDealerUnitTest {
 
         int[] total = new int[13];
         for (Player player : players) {
-            assertEquals(10, player.cards.size());
-            for (Card card : player.cards) {
+            assertEquals(10, player.mainStack.size());
+            for (Card card : player.mainStack) {
                 total[card.value]++;
             }
         }
