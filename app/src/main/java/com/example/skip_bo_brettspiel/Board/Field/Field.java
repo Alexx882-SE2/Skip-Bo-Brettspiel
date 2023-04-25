@@ -16,7 +16,7 @@ public abstract class Field {
      * @param name The name of the field.
      * @param positionOnBoard The position of the field on the board.
      */
-    public Field(String name, int positionOnBoard) {
+    protected Field(String name, int positionOnBoard) {
         this.name = name;
         this.positionOnBoard = positionOnBoard;
     }

@@ -15,7 +15,7 @@ public class BoardIntegrationTest {
 
     Board b = new Board(24);
 
-    public void init() {
+    void init() {
         b.addField(new BlueField("First Blue Field", 1));
         b.addField(new BlueField("Second Blue Field", 2));
         b.addField(new NumberedField("8-5 Field", 3, 5, 8));
@@ -43,7 +43,7 @@ public class BoardIntegrationTest {
     }
 
     @Test
-    public void printBoard() {
+    void printBoard() {
         init();
         for (int i = 0; i < 24; i++) {
             System.out.println(b.getField(i).description());

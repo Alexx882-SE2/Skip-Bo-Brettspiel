@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class BoardTest {
     @Test
-    public void testAddField() {
+    void testAddField() {
         Board board = new Board(5);
         Field field = new BlueField("test", 1);
         board.addField(field);
@@ -19,7 +19,7 @@ public class BoardTest {
     }
 
     @Test
-    public void testGetField() {
+    void testGetField() {
         Board board = new Board(5);
         Field field = new BlueField("test", 1);
         board.addField(field);

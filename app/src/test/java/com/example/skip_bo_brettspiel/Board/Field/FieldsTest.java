@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class FieldsTest {
 
     @Test
-    public void testNumberedFieldConstructorAndGetters() {
+    void testNumberedFieldConstructorAndGetters() {
         NumberedField field = new NumberedField("Test", 5, 1, 10);
         assertEquals("Test", field.getName());
         assertEquals(5, field.getPositionOnBoard());
@@ -16,7 +16,7 @@ public class FieldsTest {
     }
 
     @Test
-    public void testNumberedFieldSetters() {
+    void testNumberedFieldSetters() {
         NumberedField field = new NumberedField("Test", 5, 1, 10);
         field.setLowerBound(0);
         field.setUpperBound(20);
@@ -25,42 +25,42 @@ public class FieldsTest {
     }
 
     @Test
-    public void testOrangeFieldConstructor() {
+    void testOrangeFieldConstructor() {
         OrangeField field = new OrangeField("Test Field", 3);
         assertEquals("Test Field", field.getName());
         assertEquals(3, field.getPositionOnBoard());
     }
 
     @Test
-    public void testRedFieldConstructor() {
+    void testRedFieldConstructor() {
         RedField field = new RedField("Test Field", 3);
         assertEquals("Test Field", field.getName());
         assertEquals(3, field.getPositionOnBoard());
     }
 
     @Test
-    public void testPurpleFieldConstructor() {
+    void testPurpleFieldConstructor() {
         PurpleField field = new PurpleField("Test Field", 3);
         assertEquals("Test Field", field.getName());
         assertEquals(3, field.getPositionOnBoard());
     }
 
     @Test
-    public void testSkipBoFieldConstructor() {
+    void testSkipBoFieldConstructor() {
         SkipBoField field = new SkipBoField("Test Field", 3);
         assertEquals("Test Field", field.getName());
         assertEquals(3, field.getPositionOnBoard());
     }
 
     @Test
-    public void testSwitchCardFieldConstructor() {
+    void testSwitchCardFieldConstructor() {
         SwitchCardField field = new SwitchCardField("Test Field", 3);
         assertEquals("Test Field", field.getName());
         assertEquals(3, field.getPositionOnBoard());
     }
 
     @Test
-    public void testPinkFieldConstructor() {
+    void testPinkFieldConstructor() {
         PinkField field = new PinkField("Test Field", 3);
         assertEquals("Test Field 3", field.description());
     }
