@@ -8,7 +8,7 @@ import com.example.skip_bo_brettspiel.Board.Field.Field;
 
 import org.junit.jupiter.api.Test;
 
-public class BoardTest {
+class BoardTest {
     @Test
     void testAddField() {
         Board board = new Board(5);

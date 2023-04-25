@@ -11,7 +11,7 @@ import com.example.skip_bo_brettspiel.Board.Field.SwitchCardField;
 
 import org.junit.jupiter.api.Test;
 
-public class BoardIntegrationTest {
+class BoardIntegrationTest {
 
     Board b = new Board(24);
 

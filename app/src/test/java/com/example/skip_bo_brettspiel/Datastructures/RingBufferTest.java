@@ -6,27 +6,27 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class RingBufferTest {
+class RingBufferTest {
 
     private RingBuffer<Integer> buffer;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         buffer = new RingBuffer<>(5);
     }
 
     @AfterEach
-    public void destroy(){buffer = null;}
+    void destroy(){buffer = null;}
 
     @Test
-    public void testAdd() {
+    void testAdd() {
         buffer.add(1);
         assertEquals(1, buffer.getSize());
         assertEquals(1, buffer.get(0));
     }
 
     @Test
-    public void testAddFullBuffer() {
+    void testAddFullBuffer() {
         buffer.add(1);
         buffer.add(2);
         buffer.add(3);
@@ -39,7 +39,7 @@ public class RingBufferTest {
 
 
     @Test
-    public void testRemove() {
+    void testRemove() {
         buffer.add(1);
         buffer.add(2);
         int item = buffer.remove();
@@ -49,12 +49,12 @@ public class RingBufferTest {
     }
 
     @Test
-    public void testRemoveEmpty() {
+    void testRemoveEmpty() {
         assertThrows(IllegalStateException.class, () -> buffer.remove());
     }
 
     @Test
-    public void testGet() {
+    void testGet() {
         buffer.add(1);
         buffer.add(2);
         buffer.add(3);
@@ -62,24 +62,24 @@ public class RingBufferTest {
     }
 
     @Test
-    public void testGetEmpty() {
+    void testGetEmpty() {
         assertThrows(IndexOutOfBoundsException.class, () -> buffer.get(0));
     }
 
     @Test
-    public void testGetInvalidIndex() {
+    void testGetInvalidIndex() {
         buffer.add(1);
         assertThrows(IndexOutOfBoundsException.class, () -> buffer.get(1));
     }
 
     @Test
-    public void testMoveWithinBounds() {
+    void testMoveWithinBounds() {
         assertEquals(2, buffer.move(0, 2));
         assertEquals(3, buffer.move(1, 2));
     }
 
     @Test
-    public void testGetCapacity(){
+    void testGetCapacity(){
         assertEquals(5,buffer.getCapacity());
     }
 }
