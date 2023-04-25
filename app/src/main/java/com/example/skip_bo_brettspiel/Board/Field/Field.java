@@ -30,4 +30,11 @@ public abstract class Field {
         return name + " " + positionOnBoard;
     }
 
+    public int getPositionOnBoard() {
+        return positionOnBoard;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
