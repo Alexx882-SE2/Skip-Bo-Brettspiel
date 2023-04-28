@@ -10,7 +10,8 @@ public class Player {
 
     private String name;
 
-    public ArrayList<Card> cards = new ArrayList<>();
+    public ArrayList<Card> mainStack = new ArrayList<Card>();
+    public ArrayList<Card> handCards = new ArrayList<Card>();
 
 
     public Player(String name) {

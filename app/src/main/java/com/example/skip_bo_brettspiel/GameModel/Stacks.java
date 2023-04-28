@@ -1,8 +1,9 @@
+
 package com.example.skip_bo_brettspiel.GameModel;
 
 import android.util.Log;
-
 import java.util.ArrayList;
+
 
 /**
  * The Stacks class represents a stack of cards in the game.
