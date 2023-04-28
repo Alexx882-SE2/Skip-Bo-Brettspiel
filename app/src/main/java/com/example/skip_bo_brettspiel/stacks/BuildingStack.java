@@ -21,7 +21,7 @@ public class BuildingStack extends Stack {
      */
     public ArrayList<Integer> next() {
         ArrayList<Integer> possibleValues = new ArrayList<>();
-        if (this.getCards().size() == 0) {
+        if (this.getCards().isEmpty()) {
             for (int i = 0; i <= 12; i++) {
                 possibleValues.add(i);
             }

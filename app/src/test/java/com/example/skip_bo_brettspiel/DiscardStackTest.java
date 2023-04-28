@@ -13,7 +13,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class DiscardStackTest {
+class DiscardStackTest {
     private DiscardStack ds;
 
     @BeforeEach
