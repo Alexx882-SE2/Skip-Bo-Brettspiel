@@ -1,9 +1,11 @@
-package com.example.skip_bo_brettspiel.GameModel.GameLogic.DynamicParts;
+
+package com.example.skip_bo_brettspiel.GameModel;
 
 import android.util.Log;
 
+
 import java.util.ArrayList;
-import com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts.Card;
+
 
 /**
  * The Stacks class represents a stack of cards in the game.
@@ -11,11 +13,14 @@ import com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts.Card;
  */
 public class Stacks {
 
-    /** The list of GameCards in the stack. */
+    /**
+     * The list of GameCards in the stack.
+     */
     private ArrayList<Card> playerStack = new ArrayList<>();
 
     /**
      * Returns the list of GameCards in the stack.
+     *
      * @return the list of GameCards in the stack.
      */
     public ArrayList<Card> getPlayerStack() {
@@ -26,13 +31,14 @@ public class Stacks {
      * Returns the top card of the stack.
      * If the top card is a SkipBoCard, it is cast to a SkipBoCard and returned.
      * If the top card is a Card, it is cast to a Card and returned.
+     *
      * @return the top card of the stack.
      */
     public Card getTopCard() {
         try {
-            return  playerStack.get(playerStack.size() - 1);
+            return playerStack.get(playerStack.size() - 1);
 
-            } catch (IndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("PlayerStack empty");
             return null; // or some better value
         }
@@ -55,7 +61,7 @@ public class Stacks {
     }
 
 
-    public int getPlayerStackSize(){
+    public int getPlayerStackSize() {
         return playerStack.size();
     }
 

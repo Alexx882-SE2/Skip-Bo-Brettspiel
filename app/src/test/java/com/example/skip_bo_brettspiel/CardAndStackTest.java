@@ -4,9 +4,10 @@ package com.example.skip_bo_brettspiel;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.example.skip_bo_brettspiel.GameModel.Card;
+
 import org.junit.jupiter.api.Test;
 
-import com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts.Card;
 
 public class CardAndStackTest {
 

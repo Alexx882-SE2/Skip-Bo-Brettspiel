@@ -32,7 +32,8 @@ public class CardDealerUnitTest {
             for (Player player : players) {
                 assertEquals(10, player.mainStack.size());
                 for (Card card : player.mainStack) {
-                    total[card.value]++;
+                    total[card.cardNumber]++;
+
                 }
             }
             assertTrue(total[0] <= 12);
@@ -45,7 +46,7 @@ public class CardDealerUnitTest {
         for (Player player : players) {
             assertEquals(10, player.mainStack.size());
             for (Card card : player.mainStack) {
-                total[card.value]++;
+                total[card.cardNumber]++;
             }
         }
         assertTrue(total[0] <= 12);
