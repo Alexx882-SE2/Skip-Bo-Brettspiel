@@ -1,5 +1,6 @@
 package com.example.skip_bo_brettspiel;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -28,32 +29,50 @@ public class GameTest {
     }
 
     @Test
-    public void startGameBehaviour(){
+    public void startNormalGameBehaviour(){
         Game game1 = new Game(players);
         game1.addPlayer(new Player("Spieler100"));
         game1.startGame();
+        assertTrue(game1.isStarted());
+    }
+
+    @Test
+    public void tooManyPlayersTest(){
+        players.add(new Player("Spieler 3"));
+        players.add(new Player("Spieler 4"));
+        String tooManyPlayersException = "Maximum 4 players allowed";
+
+        Game game1 = new Game(players);
         Exception ex1 = assertThrows(IllegalArgumentException.class, () ->{
+            game1.addPlayer(new Player("Spieler 5"));
+        });
+        assertTrue(ex1.getMessage().contains(tooManyPlayersException));
+
+        players.add(new Player("Spieler 6"));
+        Exception ex2 = assertThrows(IllegalArgumentException.class, () ->{
             game1.startGame();
         });
+        assertTrue(ex2.getMessage().contains(tooManyPlayersException));
 
-        String expectedMessage1 = "Game already started";
-        String actualMessage1 = ex1.getMessage();
+    }
 
-        assertTrue(actualMessage1.contains(expectedMessage1));
+    @Test
+    public void gameAlreadyStartedTest(){
+        Game game1 = new Game(players);
+        game1.startGame();
+        String alreadyStartedException = "Game already started";
 
-        players.add(new Player("Spieler3"));
-        players.add(new Player("Spieler4"));
-        players.add(new Player("Spieler5"));
-        Game game2= new Game(players);
+        Exception ex1 = assertThrows(IllegalArgumentException.class, () ->{
+            game1.addPlayer(new Player("Spieler 3"));
+        });
+        assertTrue(ex1.getMessage().contains(alreadyStartedException));
 
         Exception ex2 = assertThrows(IllegalArgumentException.class, () ->{
-            game2.startGame();
+            game1.startGame();
         });
+        assertTrue(ex2.getMessage().contains(alreadyStartedException));
 
-        String expectedMessage2 = "Game already started";
-        String actualMessage2 = ex2.getMessage();
 
-        assertTrue(actualMessage1.contains(expectedMessage2));
 
     }
 
