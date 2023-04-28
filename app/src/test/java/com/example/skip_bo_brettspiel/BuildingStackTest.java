@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-public class BuildingStackTest {
+class BuildingStackTest {
     private BuildingStack bs;
 
     @BeforeEach
