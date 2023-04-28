@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-import GameLogic.StaticParts.Card;
+import com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts.Card;
 
 public class CardAndStackTest {
 

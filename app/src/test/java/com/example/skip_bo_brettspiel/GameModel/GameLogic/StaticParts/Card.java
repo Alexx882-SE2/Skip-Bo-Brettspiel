@@ -1,4 +1,4 @@
-package GameLogic.StaticParts;
+package com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts;
 /**
 
  The Card class represents a card with a unique card number. The card number must be an integer between 0 and 12 (inclusive).

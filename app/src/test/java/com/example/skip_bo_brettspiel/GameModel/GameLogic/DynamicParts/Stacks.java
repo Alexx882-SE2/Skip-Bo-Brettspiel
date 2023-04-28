@@ -1,9 +1,9 @@
-package GameLogic.DynamicParts;
+package com.example.skip_bo_brettspiel.GameModel.GameLogic.DynamicParts;
 
 import android.util.Log;
 
 import java.util.ArrayList;
-import GameLogic.StaticParts.Card;
+import com.example.skip_bo_brettspiel.GameModel.GameLogic.StaticParts.Card;
 
 /**
  * The Stacks class represents a stack of cards in the game.
