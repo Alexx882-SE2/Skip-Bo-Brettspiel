@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class BuildingStack extends Stack {
 
-    private ArrayList<Integer> possibleValues;
-
     public BuildingStack() {
         super();
     }
@@ -18,16 +16,23 @@ public class BuildingStack extends Stack {
      * @return a list containing possible cardNumbers that can be played onto this stack
      */
     public ArrayList<Integer> next() {
-        this.possibleValues = new ArrayList<>();
-        this.possibleValues.add(0);
+        ArrayList<Integer> possibleValues = new ArrayList<>();
+        if (this.getCards().size() == 0) {
+            for (int i = 0; i <= 12; i++) {
+                possibleValues.add(i);
+            }
+            return possibleValues;
+        }
+
+        possibleValues.add(0);
 
         if (this.getTopCard().getCardNumber() == 12) {   //if current card on stack is 12 next one has to be 1
-            this.possibleValues.add(1);
-            return this.possibleValues;
+            possibleValues.add(1);
+            return possibleValues;
         }
-        this.possibleValues.add(this.getTopCard().getCardNumber() + 1);
+        possibleValues.add(this.getTopCard().getCardNumber() + 1);
 
-        return this.possibleValues;
+        return possibleValues;
     }
 
     /**
