@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 public class BuildingStack extends Stack {
 
+    /**
+     * This class represents a BuildingStack, which are used to play your cards onto to get rid of your cards
+     * They are started with a random card and once a stack reaches 12 cards, the next card has to be "1" or "Skipbo" again
+     */
     public BuildingStack() {
         super();
     }
