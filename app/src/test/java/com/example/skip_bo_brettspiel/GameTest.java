@@ -30,6 +30,7 @@ public class GameTest {
     @Test
     public void startGameBehaviour(){
         Game game1 = new Game(players);
+        game1.addPlayer(new Player("Spieler100"));
         game1.startGame();
         Exception ex1 = assertThrows(IllegalArgumentException.class, () ->{
             game1.startGame();
