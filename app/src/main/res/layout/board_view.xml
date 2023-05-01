@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="400dp"
     android:columnCount="7"
-    android:rowCount="7">
+    android:rowCount="8">
     <!-- ERSTE REIHE -->
     <ImageView
         android:id="@+id/field_1"
@@ -276,6 +276,15 @@
         android:scaleType="fitCenter"
         android:src="@drawable/field_skip_bo" />
 
-
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_row="3"
+        android:layout_rowWeight="1"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:scaleType="fitCenter" />
 
 </GridLayout>
+
