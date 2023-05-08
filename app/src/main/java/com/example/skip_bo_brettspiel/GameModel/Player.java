@@ -1,8 +1,11 @@
 package com.example.skip_bo_brettspiel.GameModel;
 
 import com.esotericsoftware.kryonet.Connection;
+import android.util.Log;
 
 import java.util.ArrayList;
+
+import Exceptions.NullStackException;
 
 public class Player {
 
@@ -16,6 +19,11 @@ public class Player {
 
     public Player() {
     }
+    public ArrayList<Card> mainStack = new ArrayList<Card>();
+    public ArrayList<Card> handCards = new ArrayList<Card>();
+
+
+    public Player(String name) {
 
     public Player(String name, String color) {
 
@@ -45,5 +53,18 @@ public class Player {
 
     public Connection getConnection() {
         return connection;
+    }
+
+    /**
+     * Adds a Card object to the end of the given stack.
+     *
+     * @param stack The ArrayList of cards to add the new card to.
+     * @param card  The Card object to add to the stack.
+     */
+    public void cheat(ArrayList<Card> stack, Card card) throws NullStackException {
+        if (stack == null) { // validate input parameter
+            throw new NullStackException("Invalid stack");
+        }
+        stack.add(card);
     }
 }
