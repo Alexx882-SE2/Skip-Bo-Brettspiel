@@ -8,8 +8,7 @@ public class PlayerUnitTest {
 
     @Test
     void test() {
-        Player player = new Player("Player", "blue");
-        player.cards.add(new Card(0));
+        Player player = new Player("Player");
         player.mainStack.add(new Card(0));
 
         assertEquals(0, player.mainStack.get(0).cardNumber);
