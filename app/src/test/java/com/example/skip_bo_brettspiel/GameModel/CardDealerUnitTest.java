@@ -14,10 +14,10 @@ public class CardDealerUnitTest {
     public void dealStartCardsTest() {
         ArrayList<Player> players = new ArrayList<>();
 
-        Player player1 = new Player("Player1");
-        Player player2 = new Player("Player2");
-        Player player3 = new Player("Player3");
-        Player player4 = new Player("Player4");
+        Player player1 = new Player("Player1", "blue");
+        Player player2 = new Player("Player2", "orange");
+        Player player3 = new Player("Player3", "violet");
+        Player player4 = new Player("Player4", "red");
 
         players.add(player1);
         players.add(player2);
@@ -54,7 +54,7 @@ public class CardDealerUnitTest {
             assertTrue(total[i] <= 8);
         }
 
-        Player player5 = new Player("Player5");
+        Player player5 = new Player("Player5", "pink");
         players.add(player5);
 
         assertThrows(IllegalArgumentException.class, () -> dealer.getStartCards(players));
