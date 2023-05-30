@@ -10,6 +10,7 @@ public abstract class Field {
      */
     private int positionOnBoard;
 
+    // FIXME positionOnBoard and value in subclasses is not consistent
     /**
      * Constructs a Field object with the given name and position.
      *

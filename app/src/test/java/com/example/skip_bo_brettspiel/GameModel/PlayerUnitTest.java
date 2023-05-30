@@ -13,7 +13,8 @@ public class PlayerUnitTest {
 
         assertEquals(0, player.mainStack.get(0).cardNumber);
         assertEquals(1, player.mainStack.size());
-        
+
+        // FIXME extra test for this
         assertEquals("Player", player.getName());
 
         player.setName("Player2");

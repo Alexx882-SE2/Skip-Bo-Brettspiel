@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class CardDealerUnitTest {
 
+    // FIXME too long test with too much functionality for unit test
     @Test
     public void dealStartCardsTest() {
         ArrayList<Player> players = new ArrayList<>();

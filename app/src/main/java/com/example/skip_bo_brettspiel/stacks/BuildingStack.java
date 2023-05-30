@@ -39,6 +39,7 @@ public class BuildingStack extends Stack {
         return possibleValues;
     }
 
+    // FIXME naming convention to indicate expected failure, eg tryAddCard
     /**
      * attempts to add given card to stack
      *

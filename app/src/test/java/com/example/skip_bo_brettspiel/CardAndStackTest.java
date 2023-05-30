@@ -37,6 +37,7 @@ public class CardAndStackTest {
         assertEquals("5", card.toString());
     }
 
+    // FIXME the runtime exception is for not mocking the logger.
     @Test
     void testGetPlayerStackAsStringIndexOutOfBoundsException() {
         // create a stacks object with no cards

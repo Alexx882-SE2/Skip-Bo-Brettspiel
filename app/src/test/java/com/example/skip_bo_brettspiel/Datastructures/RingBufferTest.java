@@ -72,6 +72,7 @@ class RingBufferTest {
         assertThrows(IndexOutOfBoundsException.class, () -> buffer.get(1));
     }
 
+    // FIXME also test out of bounds
     @Test
     void testMoveWithinBounds() {
         assertEquals(2, buffer.move(0, 2));

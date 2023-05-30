@@ -42,6 +42,7 @@ class BoardIntegrationTest {
         b.addField(new BlueField("Third Blue Field", 24));
     }
 
+    // FIXME this test is not testing anything
     @Test
     void printBoard() {
         init();
